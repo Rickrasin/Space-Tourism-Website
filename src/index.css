@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+
+:root {
+  margin: 0;
+
+  /* font-family: ; */
+  font-family: Barlow Condensed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* BACKGROUND  */
+  background-image: url("./assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+a:hover {
+}
+
+body {
+  margin: 0;
+  min-width: 320px; /* background */
+}
+
+h1 {
+}
+
+button {
+}
+button:hover {
+}
+button:focus,
+button:focus-visible {
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+    }
+  }
+}

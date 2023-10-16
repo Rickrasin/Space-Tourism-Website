@@ -20,19 +20,24 @@ export const Nav = styled.div`
     .navbar-item {
       display: flex;
       flex-direction: row;
-      padding: 2.3rem 0;
+      margin: 2.3rem 0;
+      height: 100%;
       gap: 0.69rem;
 
       span {
         font-weight: bold;
       }
 
-      &:hover {
+      /* &:hover {
         border-bottom: 3px solid rgba(255, 255, 255, 0.52);
-      }
+      } */
     }
 
     .active {
+      border-bottom: 3px solid ${({ theme }) => theme.colors.terciary};
+    }
+
+    .active:hover {
       border-bottom: 3px solid ${({ theme }) => theme.colors.terciary};
     }
   }

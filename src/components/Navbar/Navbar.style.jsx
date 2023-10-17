@@ -11,26 +11,32 @@ export const Nav = styled.div`
   backdrop-filter: blur(3vh);
 
   .navbar {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     margin-left: 7.69rem;
-    gap: 3.13rem;
     height: 100%;
+    width: 100%;
 
     .navbar-item {
+      box-sizing: border-box;
       display: flex;
-      flex-direction: row;
-      margin: 2.3rem 0;
-      height: 100%;
+      align-items: center;
       gap: 0.69rem;
+      height: 100%;
+
+      &:hover {
+        border-bottom: 3px solid rgba(255, 255, 255, 0.52);
+      }
+
+      p {
+        margin: 0;
+      }
 
       span {
         font-weight: bold;
       }
-
-      /* &:hover {
-        border-bottom: 3px solid rgba(255, 255, 255, 0.52);
-      } */
     }
 
     .active {

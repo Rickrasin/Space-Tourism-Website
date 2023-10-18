@@ -5,9 +5,10 @@ import { Nav } from "./Navbar.style";
 const Navbar = () => {
   return (
     <Nav>
-      <div className="line-container"></div>
-      <div className="navbar">
+      <div className="line-container">
         <div className="Line" />
+      </div>
+      <div className="navbar">
         <nav>
           <NavLink
             to="/"

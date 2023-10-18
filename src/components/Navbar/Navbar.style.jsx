@@ -2,15 +2,27 @@ import styled from "styled-components";
 
 export const Nav = styled.div`
   display: grid;
-  grid-template-columns: 6fr 8fr;
+  grid-template-columns: 5fr 8fr;
   grid-template-rows: 1fr;
 
   height: 6rem;
 
   .line-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    .Line {
+      position: absolute;
+      margin: 3rem 0;
+      left: 3rem;
+      width: 100%;
+      height: 0.0625rem;
+      opacity: 0.2515;
+      background-color: #fff;
+      z-index: 1;
+    }
   }
 
   .navbar {
@@ -19,16 +31,6 @@ export const Nav = styled.div`
     display: flex;
     height: 100%;
 
-    .Line {
-      position: absolute;
-      left: -28rem;
-      margin: 3rem 0;
-      width: 30rem;
-      height: 0.0625rem;
-      opacity: 0.2515;
-      background-color: #fff;
-      z-index: 1;
-    }
     nav {
       display: flex;
       gap: 3.12rem;

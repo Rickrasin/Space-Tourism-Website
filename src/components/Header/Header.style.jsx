@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   display: grid;
-  align-items: center;
+  grid-template-columns: 1fr 13fr;
+  align-items: center; 
   margin-top: 2.5rem;
   height: 6rem;
 
@@ -12,7 +13,6 @@ export const HeaderContainer = styled.div`
     height: 3rem;
     width: 3rem;
     margin-left: 3.44rem;
-    position: absolute;
   }
 
   .navigator-container {

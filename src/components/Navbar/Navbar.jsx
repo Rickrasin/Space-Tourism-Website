@@ -1,42 +1,53 @@
 import { NavLink } from "react-router-dom";
 
-import { motion } from "framer-motion";
 import { Nav } from "./Navbar.style";
 
 const Navbar = () => {
   return (
     <Nav>
-      <nav className="navbar">
-        <NavLink to="/" activeClassName="active" className="navbar-item">
-          <p>
-            <span>00</span> Home
-          </p>
-        </NavLink>
-        <NavLink
-          to="/Destination"
-          activeClassName="active"
-          className="navbar-item"
-        >
-          <p>
-            <span>01</span> Destination
-          </p>
-        </NavLink>
+      <div className="line-container"></div>
+      <div className="navbar">
+        <div className="Line" />
+        <nav>
+          <NavLink
+            to="/"
+            className={`navbar-item ${(navData) =>
+              navData.isActive ? "active" : "none"}`}
+          >
+            <div className="navbar-item-content">
+              <b>00</b> Home
+            </div>
+          </NavLink>
+          <NavLink
+            to="/Destination"
+            className={`navbar-item ${(navData) =>
+              navData.isActive ? "active" : "none"}`}
+          >
+            <div className="navbar-item-content">
+              <b>01</b> Destination
+            </div>
+          </NavLink>
 
-        <NavLink to="/Crew" activeClassName="active" className="navbar-item">
-          <p>
-            <span>02</span> Crew
-          </p>
-        </NavLink>
-        <NavLink
-          to="/Technology"
-          activeClassName="active"
-          className="navbar-item"
-        >
-          <p>
-            <span>03</span> Technology
-          </p>
-        </NavLink>
-      </nav>
+          <NavLink
+            to="/Crew"
+            className={`navbar-item ${(navData) =>
+              navData.isActive ? "active" : "none"}`}
+          >
+            <div className="navbar-item-content">
+              <b>02</b> Crew
+            </div>
+          </NavLink>
+          <NavLink
+            to="/Technology"
+            className={`navbar-item ${(navData) =>
+              navData.isActive ? "active" : "none"}`}
+          >
+            <div className="navbar-item-content">
+              <b>03</b> Technology
+            </div>
+          </NavLink>
+        </nav>
+      </div>
     </Nav>
   );
 };

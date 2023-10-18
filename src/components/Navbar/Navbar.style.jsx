@@ -1,41 +1,56 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-  display: flex;
-  position: absolute;
-  right: 0px;
-  top: 2.5rem;
-  width: 66%;
+  display: grid;
+  grid-template-columns: 6fr 8fr;
+  grid-template-rows: 1fr;
+
   height: 6rem;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(3vh);
+
+  .line-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 
   .navbar {
-    box-sizing: border-box;
+    background: rgba(188, 175, 175, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 7.69rem;
     height: 100%;
-    width: 100%;
 
-    .navbar-item {
-      box-sizing: border-box;
+    .Line {
+      position: absolute;
+      left: -28rem;
+      margin: 3rem 0;
+      width: 30rem;
+      height: 0.0625rem;
+      opacity: 0.2515;
+      background-color: #fff;
+      z-index: 1;
+    }
+    nav {
       display: flex;
-      align-items: center;
-      gap: 0.69rem;
-      height: 100%;
+      gap: 3.12rem;
+      margin-left: 7.69rem;
+      .navbar-item {
+        .navbar-item-content {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          gap: 0.69rem;
 
-      &:hover {
-        border-bottom: 3px solid rgba(255, 255, 255, 0.52);
-      }
-
-      p {
-        margin: 0;
-      }
-
-      span {
-        font-weight: bold;
+          color: ${({ theme }) => theme.colors.terciary};
+          font-family: Barlow Condensed;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.16875rem;
+        }
+        &:hover {
+          border-bottom: 3px solid rgba(255, 255, 255, 0.52);
+        }
       }
     }
 

@@ -13,12 +13,12 @@ const theme = {
 
 function App() {
   return (
-    <>
+    <div className="App">
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Outlet />
       </ThemeProvider>
-    </>
+    </div>
   );
 }
 

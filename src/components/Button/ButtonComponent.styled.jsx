@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const ButtonStyle = styled.button`
+export const ButtonStyle = styled(motion.button)`
   color: ${({ theme }) => theme.colors.primary};
   border: none;
   font-size: 2rem;

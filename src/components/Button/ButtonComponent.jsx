@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { ButtonStyle } from "./ButtonComponent.styled";
 
-const ButtonComponent = ({ buttonName, onClick }) => {
+const ButtonComponent = ({ buttonName }) => {
   return (
     <Link to="/Destination">
       <ButtonStyle
@@ -21,7 +21,6 @@ const ButtonComponent = ({ buttonName, onClick }) => {
 
 ButtonComponent.propTypes = {
   buttonName: PropTypes.string,
-  onClick: PropTypes.func,
 };
 
 export default ButtonComponent;

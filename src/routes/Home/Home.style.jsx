@@ -5,5 +5,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 15.69rem;
+  gap: 8.69rem;
+
+ 
 `;

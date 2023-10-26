@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import "./App.css";
+// import "./App.css";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/GlobalStyles";
 
@@ -13,12 +13,10 @@ const theme = {
 
 function App() {
   return (
-    <div className="App">
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Outlet />
       </ThemeProvider>
-    </div>
   );
 }
 

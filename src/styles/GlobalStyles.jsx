@@ -8,6 +8,16 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
 
+    #root {
+    min-height: 100vh;
+    box-sizing: border-box;
+    
+}
+
+    .app {
+    height: 100vh;
+    }
+
     a {
         text-decoration: none;
         font-family: Barlow Condensed;

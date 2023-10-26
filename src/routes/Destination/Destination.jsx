@@ -1,12 +1,14 @@
 import Header from "../../components/Header/Header";
 import DestinationContent from "./Content/DestinationContent";
 
+import { Container } from "./Destination.style";
+
 const Destination = () => {
   return (
-    <div>
+    <Container>
       <Header />
       <DestinationContent />
-    </div>
+    </Container>
   );
 };
 

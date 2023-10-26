@@ -1,8 +1,4 @@
-#root {
-}
-
 .logo {
-
 }
 .logo:hover {
 }
@@ -10,11 +6,9 @@
 }
 
 @keyframes logo-spin {
-
 }
 
 @media (prefers-reduced-motion: no-preference) {
-
 }
 
 .card {

@@ -63,6 +63,7 @@ export const SwiperContainer = styled(Swiper)`
       .left-container {
 
         // A imagem ta sendo um problema
+        // Consertar background e home 
       }
 
       .right-container {

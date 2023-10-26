@@ -5,8 +5,8 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 13fr;
-  align-items: center; 
-  margin-top: 2.5rem;
+  align-items: center;
+  padding-top: 2.5rem;
   height: 6rem;
 
   .logo {

@@ -1,20 +1,18 @@
-import { Container, Content, Nav } from "./DestinationSlider.style.jsx";
+import { Container, Content, NavGrid, Nav } from "./DestinationSlider.styled";
 import Moon from "../../assets/destination/image-moon.png";
 
 const DestinationSlider = () => {
   return (
     <Container>
-      <div className="toptop">
+      <NavGrid className="nav-grid">
         <div></div>
         <Nav>
-          <nav className="navbar">
-            <p className="navbar-item">Moon</p>
-            <p className="navbar-item">MARS</p>
-            <p className="navbar-item">EUROPA</p>
-            <p className="navbar-item">TITAN</p>
-          </nav>
+          <p className="navbar-item">Moon</p>
+          <p className="navbar-item">MARS</p>
+          <p className="navbar-item">EUROPA</p>
+          <p className="navbar-item">TITAN</p>
         </Nav>
-      </div>
+      </NavGrid>
       <Content>
         <img className="Planet" src={Moon} />
         <div>

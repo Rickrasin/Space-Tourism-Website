@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Swiper } from "swiper/react";
 
 export const Container = styled.div`
-  margin: 0 10.41rem;
+
   .container-title {
     margin-top: 4.75rem;
     color: #fff;

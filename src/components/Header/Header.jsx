@@ -1,13 +1,13 @@
-import { HeaderContainer, Logo } from "./Header.style";
+import { HeaderContainer } from "./Header.style";
 
 import LogoImg from "../../assets/shared/logo.svg";
 
 import Navbar from "../Navbar/Navbar";
 
-const Header = () => {
+const Header = () => { 
   return (
     <HeaderContainer>
-      <Logo src={LogoImg} />
+      <img src={LogoImg} alt="Logo" className="logo" />
       <Navbar />
     </HeaderContainer>
   );

@@ -5,32 +5,50 @@ import { Nav } from "./Navbar.style";
 const Navbar = () => {
   return (
     <Nav>
-      <nav className="navbar">
-        <NavLink to="/" activeClassName="active" className="navbar-item">
-          <span>00</span>
-          Home
-        </NavLink>
-        <NavLink
-          to="/Destination"
-          activeClassName="active"
-          className="navbar-item"
-        >
-          <span>01</span>
-          Destination
-        </NavLink>
-        <NavLink to="/Crew" activeClassName="active" className="navbar-item">
-          <span>02</span>
-          Crew
-        </NavLink>
-        <NavLink
-          to="/Technology"
-          activeClassName="active"
-          className="navbar-item"
-        >
-          <span>03</span>
-          Technology
-        </NavLink>
-      </nav>
+      <div className="line-container">
+        <div className="Line" />
+      </div>
+      <div className="navbar">
+        <nav>
+          <NavLink
+            to="/"
+            className={`navbar-item ${(navData) =>
+              navData.isActive ? "active" : "none"}`}
+          >
+            <div className="navbar-item-content">
+              <b>00</b> Home
+            </div>
+          </NavLink>
+          <NavLink
+            to="/Destination"
+            className={`navbar-item ${(navData) =>
+              navData.isActive ? "active" : "none"}`}
+          >
+            <div className="navbar-item-content">
+              <b>01</b> Destination
+            </div>
+          </NavLink>
+
+          <NavLink
+            to="/Crew"
+            className={`navbar-item ${(navData) =>
+              navData.isActive ? "active" : "none"}`}
+          >
+            <div className="navbar-item-content">
+              <b>02</b> Crew
+            </div>
+          </NavLink>
+          <NavLink
+            to="/Technology"
+            className={`navbar-item ${(navData) =>
+              navData.isActive ? "active" : "none"}`}
+          >
+            <div className="navbar-item-content">
+              <b>03</b> Technology
+            </div>
+          </NavLink>
+        </nav>
+      </div>
     </Nav>
   );
 };

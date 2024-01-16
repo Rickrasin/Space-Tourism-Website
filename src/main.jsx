@@ -11,6 +11,7 @@ import Crew from "./routes/Crew/Crew";
 import Technology from "./routes/Technology/Technology.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/store.jsx";
+import Data from "./data.json";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,10 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/Destination", element: <Destination /> },
+      {
+        path: "/Destination",
+        element: <Destination destinations={Data.destinations} />
+      },
       { path: "/Crew", element: <Crew /> },
       { path: "/Technology", element: <Technology /> }
     ]

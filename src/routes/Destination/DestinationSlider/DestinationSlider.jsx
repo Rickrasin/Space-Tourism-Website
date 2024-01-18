@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Container, NavGrid, Nav } from "./DestinationSlider.styled";
-import SlidedContent from "./SlideContent";
+import SlidedContent from "./SlidedContent";
 
 const DestinationSlider = ({ destinations }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const activeDestination = destinations[activeIndex];
 
   const handleNavItemClick = (index) => {
     setActiveIndex(index);
   };
-
-  const activeDestination = destinations[activeIndex];
 
   return (
     <Container>
@@ -27,13 +26,7 @@ const DestinationSlider = ({ destinations }) => {
           ))}
         </Nav>
       </NavGrid>
-      <SlidedContent
-        Title={activeDestination.name}
-        ImgSrc={activeDestination.images.png}
-        description={activeDestination.description}
-        AVGDistance={activeDestination.distance}
-        ESTTravel={activeDestination.travel}
-      />
+      <SlidedContent destination={activeDestination} />
     </Container>
   );
 };

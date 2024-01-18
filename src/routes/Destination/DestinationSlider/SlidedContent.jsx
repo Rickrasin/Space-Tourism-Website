@@ -1,28 +1,26 @@
+// SlidedContent.jsx
+import React from "react";
 import { Content } from "./DestinationSlider.styled";
 
-const SlideContent = ({
-  Title,
-  ImgSrc,
-  description,
-  AVGDistance,
-  ESTTravel
-}) => {
+const SlidedContent = ({ destination }) => {
+  const { name, images, description, distance, travel } = destination;
+
   return (
     <Content>
-      <img className="Planet" src={ImgSrc} />
+      <img className="Planet" src={images.png} alt={name} />
       <div className="planets-content">
         <div className="top">
-          <h1>{Title}</h1>
+          <h1>{name}</h1>
           <p>{description}</p>
         </div>
         <div className="bottom">
           <div>
             <h3>AVG. DISTANCE</h3>
-            <p>{AVGDistance}</p>{" "}
+            <p>{distance}</p>{" "}
           </div>
           <div>
             <h3>Est. travel time</h3>
-            <p>{ESTTravel}</p>{" "}
+            <p>{travel}</p>{" "}
           </div>
         </div>
       </div>
@@ -30,4 +28,4 @@ const SlideContent = ({
   );
 };
 
-export default SlideContent;
+export default SlidedContent;

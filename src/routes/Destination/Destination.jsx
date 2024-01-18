@@ -1,3 +1,4 @@
+// Destination.jsx
 import { Container, HomeTitle } from "./Destination.styled";
 import Header from "../../components/Header/Header";
 import DestinationSlider from "./DestinationSlider/DestinationSlider";

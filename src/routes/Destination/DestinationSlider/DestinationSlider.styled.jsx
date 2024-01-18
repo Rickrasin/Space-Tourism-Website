@@ -42,7 +42,7 @@ export const Nav = styled.nav`
 
 export const Content = styled.div`
   display: grid;
-  grid-template-columns: 3fr 3fr;
+  grid-template-columns: 1fr 1fr;
 
   .planets-content {
     display: flex;
@@ -60,7 +60,6 @@ export const Content = styled.div`
       padding-top: 1.75rem;
 
       div {
-        
         h3 {
           font-family: "Bellefair";
           color: ${({ theme }) => theme.colors.secondary};
@@ -80,3 +79,4 @@ export const Content = styled.div`
     }
   }
 `;
+  

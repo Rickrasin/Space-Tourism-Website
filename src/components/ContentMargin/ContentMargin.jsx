@@ -8,9 +8,13 @@ const ContentContainer = styled.div`
 
 // Componente de página
 // eslint-disable-next-line react/prop-types
-const ContentMargin = ({ marginLeft, marginRight, children }) => {
+const ContentMargin = ({ marginLeft, marginRight, className, children }) => {
   return (
-    <ContentContainer marginLeft={marginLeft} marginRight={marginRight}>
+    <ContentContainer
+      marginLeft={marginLeft}
+      marginRight={marginRight}
+      className={className}
+    >
       {children}
     </ContentContainer>
   );

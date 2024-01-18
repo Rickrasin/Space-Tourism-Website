@@ -10,11 +10,14 @@ const Destination = ({ destinations }) => {
     <Page background={backgroundImage}>
       <Container>
         <Header />
-        <ContentMargin marginLeft="11%" marginRight="11%">
+        <ContentMargin
+          marginLeft="11%"
+          marginRight="11%"
+          className="content-margin"
+        >
           <HomeTitle>
-            <h2>
-              <span>01 </span> Pick your Destination
-            </h2>
+            <span>01 </span>
+            <h2>Pick your Destination</h2>
           </HomeTitle>
           <DestinationSlider destinations={destinations} />
         </ContentMargin>

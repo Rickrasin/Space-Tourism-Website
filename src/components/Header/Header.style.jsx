@@ -7,7 +7,6 @@ export const HeaderContainer = styled.div`
   grid-template-columns: 1fr 13fr;
   align-items: center;
   padding-top: 2.5rem;
-  height: 6rem;
 
   .logo {
     height: 3rem;

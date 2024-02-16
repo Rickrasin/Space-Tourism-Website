@@ -4,6 +4,7 @@ import styled from "styled-components";
 const PageContainer = styled.div`
   background-image: ${(props) => `url(${props.background})` || "white"};
   min-height: 100vh;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 `;

@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 // Estilo do componente de página
 const ContentContainer = styled.div`
-  margin-right: ${(props) => props.marginRight || "10.41rem"};
-  margin-left: ${(props) => props.marginLeft || "10.41rem"};
+  margin-right: ${(props) => props.marginRight || "11%"};
+  margin-left: ${(props) => props.marginLeft || "11%"};
 `;
 
 // Componente de página
 // eslint-disable-next-line react/prop-types
-const ContentMargin = ({ marginLeft, marginRight, className, children }) => {
+const ContentMargin = ({ marginLeft = "11%", marginRight = "11%", className, children }) => {
   return (
     <ContentContainer
       marginLeft={marginLeft}

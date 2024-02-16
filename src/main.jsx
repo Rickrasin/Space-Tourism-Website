@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         path: "/Destination",
         element: <Destination destinations={Data.destinations} />
       },
-      { path: "/Crew", element: <Crew /> },
+      { path: "/Crew", element: <Crew crew={Data.crew} /> },
       { path: "/Technology", element: <Technology /> }
     ]
   }

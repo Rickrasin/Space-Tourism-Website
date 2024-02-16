@@ -3,18 +3,17 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4.75rem;
 
   .content-margin {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    margin-top: 3%;
   }
 `;
 
 export const HomeTitle = styled.div`
   display: flex;
-  gap: 1.75rem;
+  gap: 1.4%;
 
   font-size: 1.75rem;
   font-weight: 500;
@@ -22,6 +21,7 @@ export const HomeTitle = styled.div`
   text-transform: uppercase;
 
   h2 {
+    font-size: 28px;
     color: #fff;
   }
 

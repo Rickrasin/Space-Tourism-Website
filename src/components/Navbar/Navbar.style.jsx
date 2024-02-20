@@ -34,7 +34,7 @@ export const Nav = styled.div`
     nav {
       display: flex;
       gap: 3.12rem;
-      margin-left: 7.69rem;
+      margin-left: 22%;
       .navbar-item {
         .navbar-item-content {
           display: flex;

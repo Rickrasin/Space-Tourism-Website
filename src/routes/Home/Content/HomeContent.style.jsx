@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
 
   .content-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    justify-content: center;
+    height: 100%;
     gap: 1.5rem;
 
     &-subtitle {

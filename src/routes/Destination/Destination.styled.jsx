@@ -3,16 +3,23 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   .content-margin {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    height: 100%;
+  }
+  .title {
     display: flex;
     flex-direction: column;
-    margin-top: 3%;
+    justify-content: center;
   }
 `;
 
 export const HomeTitle = styled.div`
   display: flex;
+
   gap: 1.4%;
 
   font-size: 1.75rem;

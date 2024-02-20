@@ -16,10 +16,12 @@ const Destination = ({ destinations }) => {
           marginRight="11%"
           className="content-margin"
         >
-          <HomeTitle>
-            <span>01 </span>
-            <h2>Pick your Destination</h2>
-          </HomeTitle>
+          <div className="title">
+            <HomeTitle>
+              <span>01 </span>
+              <h2>Pick your Destination</h2>
+            </HomeTitle>
+          </div>
           <DestinationSlider destinations={destinations} />
         </ContentMargin>
       </Container>

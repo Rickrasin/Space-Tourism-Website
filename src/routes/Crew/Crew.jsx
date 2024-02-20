@@ -16,11 +16,13 @@ const Crew = ({ crew }) => {
           className="content-margin"
         >
           <Content>
-            <h1 className="title">
-              <span>02</span> Meet Your Crew
-            </h1>
+            <div className="title">
+              <HomeTitle>
+                <span>02</span> Meet Your Crew
+              </HomeTitle>
+            </div>
             <div className="content-container">
-              <div>
+              <div className="container-left">
                 <h2>Commander</h2>
                 <h1>Douglas Hurley</h1>
                 <p>

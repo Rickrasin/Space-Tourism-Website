@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 12fr;
-`;
-
 export const NavGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 12fr;
+  .nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -20,7 +19,6 @@ export const Nav = styled.nav`
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
-
   gap: 2.19rem;
 
   .navbar-item {
@@ -28,14 +26,33 @@ export const Nav = styled.nav`
     cursor: pointer;
     padding-bottom: 0.75rem;
     border-bottom: 3px solid transparent;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background-color: #979797;
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+      transform: translateX(-50%);
+    }
 
     &:hover {
-      border-bottom: 0.1875rem solid #fff;
+      &::before {
+        width: 100%;
+        left: 50;
+      }
     }
   }
 
   .active {
     border-bottom: 0.1875rem solid ${({ theme }) => theme.colors.terciary};
+    &::before {
+      background-color: transparent !important;
+    }
   }
 `;
 

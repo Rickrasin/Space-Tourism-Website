@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 // Estilo do componente de página
@@ -12,6 +13,11 @@ const PageContainer = styled.div`
 // Componente de página
 const Page = ({ background, children }) => {
   return <PageContainer background={background}>{children}</PageContainer>;
+};
+
+Page.propTypes = {
+  background: PropTypes.string,
+  children: PropTypes.element
 };
 
 export default Page;

@@ -12,8 +12,7 @@ const Navbar = () => {
         <nav>
           <NavLink
             to="/"
-            className={`navbar-item ${(navData) =>
-              navData.isActive ? "active" : "none"}`}
+            className={`navbar-item`}
           >
             <div className="navbar-item-content">
               <b>00</b> Home
@@ -21,8 +20,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="/Destination"
-            className={`navbar-item ${(navData) =>
-              navData.isActive ? "active" : "none"}`}
+            className={`navbar-item`}
           >
             <div className="navbar-item-content">
               <b>01</b> Destination
@@ -31,17 +29,16 @@ const Navbar = () => {
 
           <NavLink
             to="/Crew"
-            className={`navbar-item ${(navData) =>
-              navData.isActive ? "active" : "none"}`}
+            className={`navbar-item`}
           >
+            {" "}
             <div className="navbar-item-content">
               <b>02</b> Crew
             </div>
           </NavLink>
           <NavLink
             to="/Technology"
-            className={`navbar-item ${(navData) =>
-              navData.isActive ? "active" : "none"}`}
+            className={`navbar-item`}
           >
             <div className="navbar-item-content">
               <b>03</b> Technology

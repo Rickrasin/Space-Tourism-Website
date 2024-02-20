@@ -31,29 +31,55 @@ export const Content = styled.div`
     .container-left {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
+      &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-      h2 {
-        font-family: "bellefair";
-        opacity: 50.42%;
-        letter-spacing: 0;
-        font-size: 2rem;
-        text-transform: uppercase;
-        margin-bottom: 0.9375rem;
+        h2 {
+          font-family: "bellefair";
+          opacity: 50.42%;
+          letter-spacing: 0;
+          font-size: 2rem;
+          text-transform: uppercase;
+          margin-bottom: 0.9375rem;
+        }
+
+        h1 {
+          font-family: "bellefair";
+          font-size: 3.5rem;
+          letter-spacing: 0;
+          text-transform: uppercase;
+        }
+
+        p {
+          margin-top: 1.6875rem;
+          font-size: 1.125rem;
+          letter-spacing: 0;
+          line-height: 2rem;
+        }
       }
 
-      h1 {
-        font-family: "bellefair";
-        font-size: 3.5rem;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
+      .nav {
+        display: flex;
+        gap: 1.375rem;
 
-      p {
-        margin-top: 1.6875rem;
-        font-size: 1.125rem;
-        letter-spacing: 0;
-        line-height: 2rem;
+        &-item {
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          background-color: #fff;
+          opacity: 17.44%;
+        }
+
+        .hover {
+          opacity: 50% !important;
+        }
+
+        .active {
+          opacity: 100% !important;
+        }
       }
     }
 

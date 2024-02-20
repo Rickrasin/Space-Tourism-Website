@@ -36,32 +36,55 @@ export const Nav = styled.div`
       gap: 3.12rem;
       margin-left: 22%;
       .navbar-item {
-        .navbar-item-content {
-          display: flex;
-          align-items: center;
-          height: 100%;
-          gap: 0.69rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: ${({ theme }) => theme.colors.terciary};
+        font-family: Barlow Condensed;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.16875rem;
+        border-bottom: 3px solid transparent;
+        transition: border-bottom 0.3s ease-in-out;
 
-          color: ${({ theme }) => theme.colors.terciary};
-          font-family: Barlow Condensed;
-          font-size: 1rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          letter-spacing: 0.16875rem;
+        &-content {
+          display: flex;
+          gap: 0.69rem;
         }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -3px;
+          left: 50%;
+          width: 0;
+          height: 3px;
+          background-color: #979797;
+          transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+          transform: translateX(-50%);
+        }
+
         &:hover {
-          border-bottom: 3px solid rgba(255, 255, 255, 0.52);
+          &::before {
+            width: 100%;
+            left: 50;
+          }
         }
       }
     }
+  }
 
-    .active {
-      border-bottom: 3px solid ${({ theme }) => theme.colors.terciary};
-    }
-
-    .active:hover {
-      border-bottom: 3px solid ${({ theme }) => theme.colors.terciary};
+  .active {
+    border-bottom: 3px solid ${({ theme }) => theme.colors.terciary} !important;
+    &::before {
+      background-color: transparent !important;
     }
   }
+
+  /* .active:hover {
+    border-bottom: 3px solid ${({ theme }) => theme.colors.terciary} !important;
+  } */
 `;

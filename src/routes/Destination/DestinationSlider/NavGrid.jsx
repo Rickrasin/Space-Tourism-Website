@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Container, NavGrid, Nav } from "./DestinationSlider.styled";
+import PropTypes from "prop-types";
+import { NavGrid, Nav } from "./DestinationSlider.styled";
 import SlidedContent from "./SlidedContent";
 
 const DestinationSlider = ({ destinations }) => {
@@ -11,8 +12,8 @@ const DestinationSlider = ({ destinations }) => {
   };
 
   return (
-    <Container>
-      <NavGrid className="nav-grid">
+    <NavGrid>
+      <div className="nav-grid">
         <div></div>
         <Nav>
           {destinations.map((destination, index) => (
@@ -21,14 +22,18 @@ const DestinationSlider = ({ destinations }) => {
               className={`navbar-item ${activeIndex === index ? "active" : ""}`}
               onClick={() => handleNavItemClick(index)}
             >
-              {destination.name}
+              <div className="navbar-item-content">{destination.name}</div>
             </p>
           ))}
         </Nav>
-      </NavGrid>
+      </div>
       <SlidedContent destination={activeDestination} />
-    </Container>
+    </NavGrid>
   );
+};
+
+DestinationSlider.propTypes = {
+  destinations: PropTypes.array
 };
 
 export default DestinationSlider;

@@ -21,7 +21,7 @@ const router = createBrowserRouter([
 
       { path: "Destination", element: <Destination destinations={Data.destinations} /> },
       { path: "Crew", element: <Crew crew={Data.crew} /> },
-      { path: "Technology", element: <Technology /> }
+      { path: "Technology", element: <Technology technology={Data.technology} /> }
     ]
   }
 ]);

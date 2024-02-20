@@ -14,16 +14,14 @@ import Data from "./data.json";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Space-Tourism-Website/",
     element: <App />,
     children: [
-      { path: "/", element: <Home /> },
-      {
-        path: "/Destination",
-        element: <Destination destinations={Data.destinations} />
-      },
-      { path: "/Crew", element: <Crew crew={Data.crew} /> },
-      { path: "/Technology", element: <Technology /> }
+      { path: "", element: <Home /> },
+
+      { path: "Destination", element: <Destination destinations={Data.destinations} /> },
+      { path: "Crew", element: <Crew crew={Data.crew} /> },
+      { path: "Technology", element: <Technology /> }
     ]
   }
 ]);

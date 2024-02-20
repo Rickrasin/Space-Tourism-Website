@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="navbar">
         <nav>
           <NavLink
-            to="/"
+            to="/Space-Tourism-Website/"
             className={`navbar-item`}
           >
             <div className="navbar-item-content">
@@ -19,7 +19,7 @@ const Navbar = () => {
             </div>
           </NavLink>
           <NavLink
-            to="/Destination"
+            to="/Space-Tourism-Website/Destination"
             className={`navbar-item`}
           >
             <div className="navbar-item-content">
@@ -28,7 +28,7 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/Crew"
+            to="/Space-Tourism-Website/Crew"
             className={`navbar-item`}
           >
             {" "}
@@ -37,7 +37,7 @@ const Navbar = () => {
             </div>
           </NavLink>
           <NavLink
-            to="/Technology"
+            to="/Space-Tourism-Website/Technology"
             className={`navbar-item`}
           >
             <div className="navbar-item-content">

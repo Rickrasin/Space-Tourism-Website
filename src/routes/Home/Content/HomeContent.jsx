@@ -15,7 +15,7 @@ const HomeContent = () => {
       <div className="button-container">
         <ButtonComponent
           buttonName="Explore"
-          link="/Destination"
+          link="/Space-Tourism-Website/Destination"
         />
       </div>
     </HomeContainer>

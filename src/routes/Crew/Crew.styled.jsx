@@ -8,6 +8,13 @@ export const Container = styled.div`
   .content-margin {
     height: 100%;
   }
+
+  .content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    gap: 8.2%;
+  }
 `;
 
 export const Content = styled.div`
@@ -20,80 +27,80 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: center;
   }
+`;
 
-  .content-container {
-    /* margin-top: 9.625rem; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
-    gap: 8.2%;
+export const ContentContainer = styled.div`
+  /* margin-top: 9.625rem; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  gap: 8.2%;
+`;
 
-    .container-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      &-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+export const ContainerLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-        h2 {
-          font-family: "bellefair";
-          opacity: 50.42%;
-          letter-spacing: 0;
-          font-size: 2rem;
-          text-transform: uppercase;
-          margin-bottom: 0.9375rem;
-        }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-        h1 {
-          font-family: "bellefair";
-          font-size: 3.5rem;
-          letter-spacing: 0;
-          text-transform: uppercase;
-        }
-
-        p {
-          margin-top: 1.6875rem;
-          font-size: 1.125rem;
-          letter-spacing: 0;
-          line-height: 2rem;
-        }
-      }
-
-      .nav {
-        display: flex;
-        gap: 1.375rem;
-
-        &-item {
-          height: 15px;
-          width: 15px;
-          border-radius: 50%;
-          background-color: #fff;
-          opacity: 17.44%;
-        }
-
-        .hover {
-          opacity: 50% !important;
-        }
-
-        .active {
-          opacity: 100% !important;
-        }
-      }
+    h2 {
+      font-family: "bellefair";
+      opacity: 50.42%;
+      letter-spacing: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 0.9375rem;
     }
 
-    .container-right {
-      position: relative;
-      img {
-        position: absolute;
-        bottom: 0;
-        height: 100%;
-      }
+    h1 {
+      font-family: "bellefair";
+      font-size: 3.5rem;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-top: 1.6875rem;
+      font-size: 1.125rem;
+      letter-spacing: 0;
+      line-height: 2rem;
+    }
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.375rem;
+
+    &-item {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 17.44%;
+    }
+
+    .hover {
+      opacity: 50% !important;
+    }
+
+    .active {
+      opacity: 100% !important;
     }
   }
 `;
 
+export const ContainerRight = styled.div`
+  position: relative;
+  img {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+  }
+`;
 export const HomeTitle = styled.div`
   display: flex;
   gap: 1.75rem;

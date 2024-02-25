@@ -4,8 +4,8 @@ import styled from "styled-components";
 // Estilo do componente de página
 const ContentContainer = styled.div`
   @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
-    margin-right: 21%;
-    margin-left: 21%;
+    margin-right: 6%;
+    margin-left: 6%;
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {

@@ -5,19 +5,18 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-top: 2.0625rem;
 
     .logo {
+      margin-left: 6%;
       height: 2rem;
       width: 2rem;
     }
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
-    justify-content: space-between;
-
     padding-top: 0;
     .logo {
       margin-left: 2.4375rem;

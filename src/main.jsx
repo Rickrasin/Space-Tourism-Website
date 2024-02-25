@@ -10,7 +10,7 @@ import Crew from "./routes/Crew/Crew";
 import Technology from "./routes/Technology/Technology.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/store.jsx";
-import Data from "./data.json";
+import Data from "./assets/data.json";
 
 const router = createBrowserRouter([
   {

@@ -1,14 +1,21 @@
 // Destination.jsx
 import { Container, HomeTitle } from "./Destination.styled";
+import PropTypes from "prop-types";
 import Header from "../../components/Header/Header";
 import NavGrid from "./DestinationSlider/NavGrid";
 import Page from "../../components/Page/Page";
-import backgroundImage from "../../assets/destination/background-destination-desktop.jpg";
+import BgDesktop from "../../assets/destination/background-destination-desktop.jpg";
+import BgTablet from "../../assets/destination/background-destination-tablet.jpg";
+import BgMobile from "../../assets/destination/background-destination-mobile.jpg";
 import ContentMargin from "../../components/ContentMargin/ContentMargin";
 
 const Destination = ({ destinations }) => {
   return (
-    <Page background={backgroundImage}>
+    <Page
+      desktopBackground={BgDesktop}
+      tabletBackground={BgTablet}
+      mobileBackground={BgMobile}
+    >
       <Container>
         <Header />
         <ContentMargin
@@ -27,6 +34,10 @@ const Destination = ({ destinations }) => {
       </Container>
     </Page>
   );
+};
+
+Destination.propTypes = {
+  destinations: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default Destination;

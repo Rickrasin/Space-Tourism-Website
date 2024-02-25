@@ -14,8 +14,7 @@ const Home = () => {
       desktopBackground={BgDesktop}
       tabletBackground={BgTablet}
       mobileBackground={BgMobile}
-      marginLeft="20px"
-      marginRight="20px"
+
     >
       <Container className="h-container">
         <Header />

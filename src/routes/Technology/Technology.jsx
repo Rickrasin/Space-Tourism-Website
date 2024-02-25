@@ -1,7 +1,12 @@
+import PropTypes from "prop-types";
+
 import Header from "../../components/Header/Header";
 import Page from "../../components/Page/Page";
 import ContentMargin from "../../components/ContentMargin/ContentMargin";
-import Background from "../../assets/technology/background-technology-desktop.jpg";
+
+import BgDesktop from "../../assets/technology/background-technology-desktop.jpg";
+import BgTablet from "../../assets/technology/background-technology-tablet.jpg";
+import BgMobile from "../../assets/technology/background-technology-mobile.jpg";
 
 import { Container, HomeTitle, Content } from "./techonology.styled";
 
@@ -12,7 +17,11 @@ const Technology = ({ technology }) => {
   console.log(technology);
 
   return (
-    <Page background={Background}>
+    <Page
+      desktopBackground={BgDesktop}
+      tabletBackground={BgTablet}
+      mobileBackground={BgMobile}
+    >
       <Container>
         <Header />
         <ContentMargin
@@ -67,6 +76,18 @@ const Technology = ({ technology }) => {
       </Container>
     </Page>
   );
+};
+
+Technology.propTypes = {
+  technology: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      images: PropTypes.shape({
+        portrait: PropTypes.string.isRequired
+      }).isRequired
+    })
+  )
 };
 
 export default Technology;

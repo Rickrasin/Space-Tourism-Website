@@ -43,7 +43,9 @@ const Page = ({ mobileBackground, tabletBackground, desktopBackground, children 
 };
 
 Page.propTypes = {
-  background: PropTypes.string,
+  mobileBackground: PropTypes.string,
+  tabletBackground: PropTypes.string,
+  desktopBackground: PropTypes.string,
   children: PropTypes.element
 };
 

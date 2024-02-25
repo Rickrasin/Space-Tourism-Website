@@ -7,16 +7,23 @@ const theme = {
   colors: {
     primary: "#0B0D17",
     secondary: "#D0D6F9",
-    terciary: "#FFF",
+    terciary: "#FFF"
   },
+  breakpoints: {
+    sm: "320px", //Celulares
+    md: "768px", //Tablets
+    lg: "992px", // Desktops
+    xl: "1200px", //Desktops
+    xxl: "1600px" //Laptops e Desktops Grandes
+  }
 };
 
 function App() {
   return (
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Outlet />
-      </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Outlet />
+    </ThemeProvider>
   );
 }
 

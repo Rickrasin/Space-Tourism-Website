@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+
+@media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
     
     * {
         color: #fff;
@@ -33,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
     h1 {
         color: ${({ theme }) => theme.colors.terciary};
         font-family: Bellefair;
-        font-size: 9.375rem;
+        font-size: 5rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -58,6 +60,34 @@ const GlobalStyles = createGlobalStyle`
     line-height: 2rem; 
     }
     
+}
+    @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+    a {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 9.375rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+  }
+
 `;
 
 export default GlobalStyles;

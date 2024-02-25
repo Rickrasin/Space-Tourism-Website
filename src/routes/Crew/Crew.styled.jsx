@@ -94,7 +94,7 @@ export const ContainerLeft = styled.div`
 `;
 
 export const ContainerRight = styled.div`
-  position: relative;
+  position: relative; 
   img {
     position: absolute;
     bottom: 0;

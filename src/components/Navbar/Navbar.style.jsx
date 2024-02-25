@@ -4,7 +4,6 @@ export const Nav = styled.div`
   @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
     display: flex;
     justify-content: space-around;
-    height: 6rem;
     margin-right: 6%;
 
     .hamburguer {
@@ -24,7 +23,8 @@ export const Nav = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
-    margin-right: 0;
+    margin-right: 0 ;
+    height: 6rem;
 
     .line-container {
       display: none;

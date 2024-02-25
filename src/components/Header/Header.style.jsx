@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2.0625rem;
+    padding-top: 1.5rem;
 
     .logo {
       margin-left: 6%;

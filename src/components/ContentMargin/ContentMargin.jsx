@@ -15,12 +15,11 @@ const ContentContainer = styled.div`
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
     margin-right: 11%;
-    margin-left: 5%;
+    margin-left: 11%;
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
-    margin-right: 11%;
-    margin-left: 11%;
+
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.xxl}) {
@@ -28,12 +27,10 @@ const ContentContainer = styled.div`
 `;
 
 // Componente de página
-const ContentMargin = ({ marginLeft, marginRight, className, children }) => {
+const ContentMargin = ({ className, children }) => {
   return (
     <ContentContainer
       as="div"
-      marginLeft={marginLeft}
-      marginRight={marginRight}
       className={className}
     >
       {children}
@@ -42,8 +39,6 @@ const ContentMargin = ({ marginLeft, marginRight, className, children }) => {
 };
 
 ContentMargin.propTypes = {
-  marginLeft: PropTypes.string,
-  marginRight: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node
 };

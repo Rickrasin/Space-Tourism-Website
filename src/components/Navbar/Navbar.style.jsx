@@ -6,14 +6,46 @@ export const Nav = styled.div`
     justify-content: space-around;
     margin-right: 6%;
 
+    .active {
+      display: flex !important;
+    }
+
     .hamburguer {
       display: block;
       margin: auto 0;
+      cursor: pointer;
     }
 
-    nav {
+    .navbar {
+      position: absolute;
       display: none;
-      .navbar {
+      flex-direction: column;
+      gap: 4.0625rem;
+      top: 0;
+      right: 0;
+      padding-top: 2.125rem;
+      width: 70%;
+      height: 100vh;
+
+      z-index: 1000;
+
+      background: rgba(188, 175, 175, 0.04);
+      backdrop-filter: blur(40.774227142333984px);
+
+      .close {
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        img {
+          margin-right: 1.65625rem;
+        }
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-left: 2rem;
+        height: 100%;
       }
     }
 
@@ -23,7 +55,7 @@ export const Nav = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
-    margin-right: 0 ;
+    margin-right: 0;
     height: 6rem;
 
     .line-container {
@@ -37,9 +69,15 @@ export const Nav = styled.div`
       backdrop-filter: blur(40.774227142333984px);
       height: 6rem;
       right: 0;
+      padding-top: 0;
+
+      .close {
+        display: none;
+      }
 
       nav {
         display: flex;
+        flex-direction: row;
         gap: 2.3125rem;
         padding: 0 3rem;
         .navbar-item {
@@ -102,12 +140,14 @@ export const Nav = styled.div`
     display: grid;
     grid-template-columns: 2fr 6fr;
     height: 6rem;
+    margin-top: 1%;
 
     .line-container {
       display: flex;
       position: relative;
       align-items: center;
       justify-content: flex-end;
+      z-index: 100;
 
       .Line {
         position: absolute;
@@ -117,14 +157,17 @@ export const Nav = styled.div`
         height: 0.0625rem;
         opacity: 0.2515;
         background-color: #fff;
-        z-index: 1;
+        z-index: 100;
       }
     }
 
     .navbar {
       position: initial;
+      z-index: 0;
+      width: 100%;
       nav {
         margin-left: 22%;
+        height: 100%;
         padding: 0;
 
         .navbar-item {

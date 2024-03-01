@@ -5,6 +5,7 @@ export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 6rem;
 
     .content-container {
       display: flex;
@@ -12,14 +13,14 @@ export const HomeContainer = styled.div`
       justify-content: center;
       align-items: center;
       height: 100%;
-      gap: 1.5rem;
+      gap: 1rem;
 
-      h2 {
+      &-subtitle {
         text-transform: uppercase;
         font-size: 1rem;
       }
 
-      p {
+      .text-content {
         text-align: center;
         font-size: 0.9375rem;
       }
@@ -36,13 +37,14 @@ export const HomeContainer = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
-    gap: 4.0625rem;
+    gap: 1rem;
     .content-container {
       h2 {
         font-size: 1.25rem;
       }
       h1 {
         font-size: 9.375rem;
+        line-height: 7.875rem;
       }
       p {
         font-size: 1.25rem;
@@ -69,8 +71,7 @@ export const HomeContainer = styled.div`
       }
     }
     .button-container {
-     justify-content: flex-end;
-
+      justify-content: flex-end;
     }
   }
 

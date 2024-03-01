@@ -1,18 +1,36 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 import { Nav } from "./Navbar.style";
 import Burguer from "../../assets/shared/icon-hamburger.svg";
+import Close from "../../assets/shared/icon-close.svg";
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsActive(!isActive);
+    console.log(isActive);
+  };
+
   return (
     <Nav>
       <div className="line-container">
         <div className="Line" />
       </div>
-      <div className="hamburguer">
+      <div
+        className="hamburguer"
+        onClick={toggleNavbar}
+      >
         <img src={Burguer} />
       </div>
-      <div className="navbar">
+      <div className={`navbar ${isActive ? "active" : ""}`}>
+        <div
+          className="close "
+          onClick={toggleNavbar}
+        >
+          <img src={Close} />
+        </div>
         <nav>
           <NavLink
             to="/Space-Tourism-Website/"
@@ -30,7 +48,6 @@ const Navbar = () => {
               <b>01</b> Destination
             </div>
           </NavLink>
-
           <NavLink
             to="/Space-Tourism-Website/Crew"
             className="navbar-item"

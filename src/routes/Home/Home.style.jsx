@@ -7,22 +7,20 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    height: 100vh;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    gap: 3.625rem;
-
+    gap: 4rem;
     .content-margin {
       height: 100%;
     }
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
-    gap: 5rem;
+    gap: 2rem;
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
-    gap: 4.75rem;
+    gap: 6rem;
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {

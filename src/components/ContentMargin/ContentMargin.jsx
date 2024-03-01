@@ -9,8 +9,8 @@ const ContentContainer = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
-    margin-right: 16%;
-    margin-left: 16%;
+    margin-right: 14%;
+    margin-left: 14%;
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {

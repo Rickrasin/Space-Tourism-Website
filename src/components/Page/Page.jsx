@@ -4,7 +4,6 @@ import styled from "styled-components";
 // Estilo do componente de página
 const PageContainer = styled.div`
   min-height: 100vh;
-  height: 100vh;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 

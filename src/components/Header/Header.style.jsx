@@ -26,7 +26,6 @@ export const HeaderContainer = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
-    padding-top: 2.5rem;
 
     .logo {
       margin-left: 50%;

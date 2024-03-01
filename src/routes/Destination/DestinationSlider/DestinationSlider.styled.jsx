@@ -92,7 +92,7 @@ export const Content = styled.div`
       flex-direction: column;
       gap: 2rem;
       .img {
-        margin: 0 auto;
+        margin: 0 auto; 
         width: 45%;
         img {
           width: 100%;

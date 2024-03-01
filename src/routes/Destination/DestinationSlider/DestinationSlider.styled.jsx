@@ -92,7 +92,7 @@ export const Content = styled.div`
       flex-direction: column;
       gap: 2rem;
       .img {
-        margin: 0 auto; 
+        margin: 0 auto;
         width: 45%;
         img {
           width: 100%;
@@ -210,17 +210,19 @@ export const Content = styled.div`
 
     .planets-content {
       gap: 1.5625rem;
+
       &-container {
         font-size: 6.25rem;
         gap: 3.375rem;
         margin: 0;
+
         .top {
           align-items: flex-start;
           gap: 2.56rem;
-        }
-
-        .p {
-          text-align: left;
+          p {
+            font-size: 1.125rem;
+            text-align: left;
+          }
         }
 
         .bottom {
@@ -229,7 +231,8 @@ export const Content = styled.div`
           padding-top: 1.75rem;
 
           p {
-            font-size: 18px;
+            font-size: 1.125rem;
+            text-align: left;
           }
         }
 

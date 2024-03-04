@@ -9,21 +9,24 @@ export const Container = styled.div`
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    gap: 4rem;
+    gap: 3.625rem;
     .content-margin {
       height: 100%;
     }
+
+    /*  */
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
-    gap: 2rem;
+    gap: 6.625rem;
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
-    gap: 6rem;
+    gap: 12.84375rem;
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+    gap: 15.6875rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.xxl}) {

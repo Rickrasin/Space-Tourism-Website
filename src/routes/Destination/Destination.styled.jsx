@@ -5,6 +5,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 1.5rem;
 
     .content-margin {
       display: flex;
@@ -20,15 +21,19 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+    gap: 2.5rem;
     .title {
       align-items: initial;
     }
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    gap: 4.75rem;
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+    gap: 6.75rem;
+
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.xxl}) {

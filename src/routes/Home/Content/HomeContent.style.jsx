@@ -5,7 +5,7 @@ export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
-    gap: 6rem;
+    gap: 5.0625rem;
 
     .content-container {
       display: flex;
@@ -39,14 +39,14 @@ export const HomeContainer = styled.div`
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
     gap: 1rem;
     .content-container {
-      h2 {
+      &-subtitle {
         font-size: 1.25rem;
       }
-      h1 {
+      .Title {
         font-size: 9.375rem;
         line-height: 7.875rem;
       }
-      p {
+      .text-content {
         font-size: 1.25rem;
       }
     }
@@ -59,13 +59,13 @@ export const HomeContainer = styled.div`
     .content-container {
       align-items: start;
 
-      h2 {
+      &-subtitle {
         font-size: 1.75rem;
       }
 
-      h1 {
+      .Title {
       }
-      p {
+      .text-content {
         font-size: 1.25rem;
         text-align: left;
       }
@@ -77,7 +77,7 @@ export const HomeContainer = styled.div`
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
     .content-container {
-      h1 {
+      .Title {
         font-size: 9.375rem;
       }
     }

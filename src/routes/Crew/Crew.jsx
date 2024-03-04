@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 
 import Header from "../../components/Header/Header";
 import Page from "../../components/Page/Page";
-import ContentMargin from "../../components/ContentMargin/ContentMargin";
 import CrewContent from "./CrewContent";
 import { Container } from "./Crew.styled";
 
@@ -19,13 +18,7 @@ const Crew = ({ crew }) => {
     >
       <Container>
         <Header />
-        <ContentMargin
-          marginLeft="11%"
-          marginRight="11%"
-          className="content-margin"
-        >
-          <CrewContent props={crew} />
-        </ContentMargin>
+        <CrewContent props={crew} />
       </Container>
     </Page>
   );

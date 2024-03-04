@@ -19,10 +19,11 @@ const ContentContainer = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
-
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+    margin-right: 16%;
+    margin-left: 16%;
   }
 `;
 

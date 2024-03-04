@@ -1,27 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
-  .content-margin {
-    height: 100%;
-  }
-`;
-
-export const Content = styled.div`
-  display: grid;
-  grid-template-rows: 2fr 6fr;
-  height: 100%;
-
-  .title {
-  }
-
-  .container {
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
     display: flex;
-    gap: 5rem;
-    nav {
+    flex-direction: column;
+    height: 100%;
+
+    .nav-container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -39,6 +24,9 @@ export const Content = styled.div`
         font-family: "Bellefair";
         font-size: 2rem;
         letter-spacing: 2px;
+        &:hover {
+          border-color: white;
+        }
       }
 
       .active {
@@ -47,39 +35,65 @@ export const Content = styled.div`
       }
     }
 
-    .content-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8.125rem;
+    .content-margin {
+      height: 100%;
+    }
+  }
+`;
 
-      &-left {
-        h2 {
-          letter-spacing: 2.7px;
-          font-weight: 400;
-          font-size: 1rem;
-          text-transform: uppercase;
-          margin-bottom: 0.9375rem;
-        }
+export const Content = styled.div`
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+    display: grid;
+    grid-template-rows: 2fr 6fr;
+    height: 100%;
 
-        h1 {
-          font-family: "bellefair";
-          font-size: 3.5rem;
-          letter-spacing: 0;
-          text-transform: uppercase;
-        }
+    .title {
+    }
 
-        p {
-          margin-top: 1.6875rem;
-          font-size: 1.125rem;
-          letter-spacing: 0;
-          line-height: 2rem;
-        }
+    .container {
+      display: flex;
+      gap: 5rem;
+      
       }
 
-      &-right {
-        img {
-          position: absolute;
-          right: 0;
+      .content-container {
+        display: grid;
+        grid-template-columns: 5fr 2fr;
+        gap: 8.125rem;
+
+        &-left {
+          display: grid;
+          grid-template-rows: 1fr 1fr 4fr;
+          h2 {
+            letter-spacing: 2.7px;
+            font-weight: 400;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 0.9375rem;
+          }
+
+          h1 {
+            font-family: "bellefair";
+            font-size: 3.5rem;
+            letter-spacing: 0;
+            text-transform: uppercase;
+          }
+
+          p {
+            width: 70%;
+            margin-top: 1.6875rem;
+            font-size: 1.125rem;
+            letter-spacing: 0;
+            line-height: 2rem;
+          }
+        }
+
+        &-right {
+          img {
+            position: absolute;
+            right: 0;
+            height: 60%;
+          }
         }
       }
     }
@@ -87,23 +101,25 @@ export const Content = styled.div`
 `;
 
 export const HomeTitle = styled.div`
-  margin: auto 0;
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+    margin: auto 0;
 
-  .title {
-    display: flex;
-    gap: 1.75rem;
+    .title {
+      display: flex;
+      gap: 1.75rem;
 
-    font-size: 1.75rem;
-    font-weight: 500;
-    letter-spacing: 0.29531rem;
-    text-transform: uppercase;
+      font-size: 1.75rem;
+      font-weight: 500;
+      letter-spacing: 0.29531rem;
+      text-transform: uppercase;
 
-    h2 {
-      color: #fff;
-    }
+      h2 {
+        color: #fff;
+      }
 
-    span {
-      opacity: 0.25;
+      span {
+        opacity: 0.25;
+      }
     }
   }
 `;

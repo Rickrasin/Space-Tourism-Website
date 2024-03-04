@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 import Header from "../../components/Header/Header";
 import Page from "../../components/Page/Page";
@@ -11,7 +12,13 @@ import BgMobile from "../../assets/technology/background-technology-mobile.jpg";
 import { Container, HomeTitle, Content } from "./techonology.styled";
 
 const Technology = ({ technology }) => {
-  const { name, description, images } = technology[0];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeTechnology = technology[activeIndex];
+
+  const { name, description, images } = activeTechnology;
+  const handleNavItemClick = (index) => {
+    setActiveIndex(index);
+  };
 
   console.log(name, description, images);
   console.log(technology);
@@ -37,25 +44,16 @@ const Technology = ({ technology }) => {
             </HomeTitle>
 
             <div className="container">
-              <nav>
-                <div
-                  className="point"
-                  key={0}
-                >
-                  1
-                </div>
-                <div
-                  className="point"
-                  key={1}
-                >
-                  2
-                </div>
-                <div
-                  className="point"
-                  key={2}
-                >
-                  3
-                </div>
+              <nav className="nav-container">
+                {technology.map((technology, index) => (
+                  <div
+                    className="point"
+                    key={index}
+                    onClick={() => handleNavItemClick(index)}
+                  >
+                    {index + 1}
+                  </div>
+                ))}
               </nav>
               <div className="content-container">
                 <div className="content-container-left">

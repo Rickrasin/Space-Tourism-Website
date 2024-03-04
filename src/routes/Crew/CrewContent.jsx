@@ -1,43 +1,66 @@
 import PropTypes from "prop-types";
-import { Content, HomeTitle, ContentContainer, ContainerLeft, ContainerRight } from "./Crew.styled";
+import { useState } from "react";
+import ContentMargin from "../../components/ContentMargin/ContentMargin";
+import { HomeTitle, Content, ContainerLeft, ContainerRight } from "./Crew.styled";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const CrewContent = ({ props }) => {
-  console.log(props);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeCrew = props[activeIndex];
+
+  const { role, bio, images, name } = activeCrew;
+
+  const handleNavItemClick = (index) => {
+    setActiveIndex(index);
+  };
 
   return (
-    <Content>
-      <div className="title">
-        <HomeTitle>
+    <ContentMargin
+      marginLeft="11%"
+      marginRight="11%"
+      className="content-margin"
+    >
+      <HomeTitle>
+        <div className="title">
           <span>02</span> Meet Your Crew
-        </HomeTitle>
-      </div>
+        </div>
+      </HomeTitle>
 
-      {/* {props.map((item, index) => ( */}
-      <ContentContainer
+      {/* {map((item, index) => ( */}
+      <Content
         className="content-container"
         // key={index}
       >
         <ContainerLeft className="container-left">
           <div className="container-left-content">
-            <h2>{props[0].role}</h2>
-            <h1>{props[0].name}</h1>
-            <p>{props[0].bio}</p>
+            <h2>{role}</h2>
+            <h1>{name}</h1>
+            <p>{bio}</p>
+          </div>
+
+          <div className="nav-container">
+            {props.map((item, index) => (
+              <div
+                className={`sphere ${activeIndex === index ? "active" : ""}`}
+                key={index}
+                defaultValue={index}
+                onClick={() => handleNavItemClick(index)}
+              ></div>
+            ))}
           </div>
         </ContainerLeft>
 
         <ContainerRight className="container-right">
           <img
-            src={props[0].images.png}
-            alt={props[0].name}
+            src={images.png}
+            alt={name}
           />
         </ContainerRight>
-      </ContentContainer>
-      {/* ))} */}
-    </Content>
+      </Content>
+    </ContentMargin>
   );
 };
 

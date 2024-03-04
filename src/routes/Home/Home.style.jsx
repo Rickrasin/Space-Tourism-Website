@@ -26,7 +26,7 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
-    gap: 15.6875rem;
+    justify-content: flex-start;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.xxl}) {

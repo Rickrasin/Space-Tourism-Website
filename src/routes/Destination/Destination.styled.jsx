@@ -5,6 +5,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-height: 100vh;
     gap: 1.5rem;
 
     .content-margin {
@@ -32,8 +33,8 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
-    gap: 6.75rem;
-
+    gap: 0;
+    justify-content: space-around;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.xxl}) {

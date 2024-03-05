@@ -31,54 +31,90 @@ export const Container = styled.div`
 
     .content-margin {
       height: 100%;
-      display: grid;
-      grid-template-rows: 1fr 4fr;
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.5rem;
+      gap: 2rem;
     }
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+    .nav-container {
+      .sphere {
+        height: 10px;
+        width: 10px;
+      }
+    }
+
+    .content-margin {
+      grid-template-rows: 1fr;
+    }
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
   }
 `;
 
 export const Content = styled.div`
   @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
     /* margin-top: 9.625rem; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
-    gap: 8.2%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
   }
 `;
 
 export const ContainerLeft = styled.div`
   @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
-    display: grid;
-    grid-template-rows: 8fr 1fr;
+    display: flex;
+    flex-direction: column-reverse;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: center;
     justify-items: start;
+    gap: 2rem;
 
     div {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      text-align: center;
 
       h2 {
         font-family: "bellefair";
         opacity: 50.42%;
         letter-spacing: 0;
-        font-size: 2rem;
+        font-size: 1rem;
         text-transform: uppercase;
         margin-bottom: 0.9375rem;
       }
 
       h1 {
         font-family: "bellefair";
-        font-size: 3.5rem;
+        font-size: 1.5rem;
         letter-spacing: 0;
         text-transform: uppercase;
       }
 
       p {
         margin-top: 1.6875rem;
-        font-size: 1.125rem;
+        font-size: 0.9375rem;
         letter-spacing: 0;
         line-height: 2rem;
       }
@@ -109,12 +145,22 @@ export const ContainerLeft = styled.div`
 
 export const ContainerRight = styled.div`
   @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom: 1px solid #383b4b;
     img {
-      position: absolute;
-      bottom: 0;
-      width: 80%;
+      width: 12rem;
     }
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
   }
 `;
 export const HomeTitle = styled.div`
@@ -124,12 +170,13 @@ export const HomeTitle = styled.div`
     justify-content: center;
     .title {
       display: flex;
-      gap: 1.75rem;
+      gap: 1rem;
 
-      font-size: 1.75rem;
+      font-size: 1rem;
       font-weight: 500;
       letter-spacing: 0.29531rem;
       text-transform: uppercase;
+      justify-content: center;
 
       h2 {
         color: #fff;
@@ -139,5 +186,18 @@ export const HomeTitle = styled.div`
         opacity: 0.25;
       }
     }
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+    .title {
+      justify-content: flex-start;
+      font-size: 1.25rem;
+    }
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
   }
 `;

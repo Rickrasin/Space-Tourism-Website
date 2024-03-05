@@ -18,11 +18,7 @@ const CrewContent = ({ props }) => {
   };
 
   return (
-    <ContentMargin
-      marginLeft="11%"
-      marginRight="11%"
-      className="content-margin"
-    >
+    <ContentMargin className="content-margin">
       <HomeTitle>
         <div className="title">
           <span>02</span> Meet Your Crew

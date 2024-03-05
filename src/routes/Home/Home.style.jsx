@@ -14,7 +14,7 @@ export const Container = styled.div`
       height: 100%;
     }
 
-    /*  */
+    
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {

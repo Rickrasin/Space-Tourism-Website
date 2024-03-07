@@ -31,8 +31,8 @@ export const Container = styled.div`
 
     .content-margin {
       height: 100%;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-rows: 1fr 11fr;
       margin-top: 1.5rem;
       gap: 2rem;
     }
@@ -62,8 +62,9 @@ export const Container = styled.div`
 export const Content = styled.div`
   @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
     /* margin-top: 9.625rem; */
-    display: flex;
-    flex-direction: column-reverse;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    align-items: start;
     gap: 2rem;
   }
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
@@ -89,7 +90,7 @@ export const ContainerLeft = styled.div`
     align-items: center;
     justify-items: start;
     gap: 2rem;
-
+    order: 1;
     div {
       display: flex;
       flex-direction: column;
@@ -141,6 +142,16 @@ export const ContainerLeft = styled.div`
       opacity: 100% !important;
     }
   }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+  }
 `;
 
 export const ContainerRight = styled.div`
@@ -150,7 +161,7 @@ export const ContainerRight = styled.div`
     align-items: flex-end;
     border-bottom: 1px solid #383b4b;
     img {
-      width: 12rem;
+      height: 14rem;
     }
   }
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {

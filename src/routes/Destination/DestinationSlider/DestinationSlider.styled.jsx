@@ -197,13 +197,13 @@ export const Content = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 7.5%;
-
+    margin-top: 0;
     .left-container {
       .img {
         width: 100%;
 
         img {
-          width: 80%;
+          width: 76%;
         }
       }
     }

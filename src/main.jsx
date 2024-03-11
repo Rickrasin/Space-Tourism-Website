@@ -18,7 +18,7 @@ import Data from "./data.json";
 
 const router = createBrowserRouter([
   {
-    path: "/Space-Tourism-Website/",
+    path: "/",
     element: <App />,
     children: [
       { path: "", element: <Home /> },

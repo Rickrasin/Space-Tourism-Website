@@ -26,14 +26,14 @@ const Navbar = () => {
       </div>
       <div className={`navbar ${isActive ? "active" : ""}`}>
         <div
-          className="close "
+          className="close"
           onClick={toggleNavbar}
         >
           <img src={Close} />
         </div>
         <nav>
           <NavLink
-            to="/Space-Tourism-Website/"
+            to="/"
             className="navbar-item"
           >
             <div className="navbar-item-content">
@@ -41,7 +41,7 @@ const Navbar = () => {
             </div>
           </NavLink>
           <NavLink
-            to="/Space-Tourism-Website/Destination"
+            to="/Destination"
             className="navbar-item"
           >
             <div className="navbar-item-content">
@@ -49,7 +49,7 @@ const Navbar = () => {
             </div>
           </NavLink>
           <NavLink
-            to="/Space-Tourism-Website/Crew"
+            to="/Crew"
             className="navbar-item"
           >
             {" "}
@@ -58,7 +58,7 @@ const Navbar = () => {
             </div>
           </NavLink>
           <NavLink
-            to="/Space-Tourism-Website/Technology"
+            to="/Technology"
             className="navbar-item"
           >
             <div className="navbar-item-content">

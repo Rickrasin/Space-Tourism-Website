@@ -12,6 +12,10 @@ import { Provider } from "react-redux";
 import store from "./redux/store.jsx";
 import Data from "./data.json";
 
+
+// Função para converter imagens para base64
+
+
 const router = createBrowserRouter([
   {
     path: "/Space-Tourism-Website/",
@@ -24,6 +28,8 @@ const router = createBrowserRouter([
     ]
   }
 ]);
+
+console.log(Data);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>

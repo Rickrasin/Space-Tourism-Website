@@ -3,14 +3,33 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { Content, NavContainer, Nav } from "./DestinationSlider.styled";
 import { HomeTitle } from "../Destination.styled";
+import Moon from "../../../assets/destination/image-moon.png";
+import Mars from "../../../assets/destination/image-mars.png";
+import Europa from "../../../assets/destination/image-europa.png";
 
 const SlidedContent = ({ destinations }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeDestination = destinations[activeIndex];
+  console.log(destinations);
 
-  const { name, images, description, distance, travel } = activeDestination;
+  const { name, description, distance, travel } = activeDestination;
   const handleNavItemClick = (index) => {
     setActiveIndex(index);
+  };
+
+  const GetImage = () => {
+    switch (activeIndex) {
+      case 0:
+        return Moon;
+      case 1:
+        return Mars;
+
+      case 2:
+        return Europa;
+
+      default:
+        return Moon;
+    }
   };
 
   return (
@@ -25,7 +44,7 @@ const SlidedContent = ({ destinations }) => {
         <div className="img">
           <img
             className="Planet"
-            src={images.png}
+            src={GetImage()}
             alt={name}
           />
         </div>

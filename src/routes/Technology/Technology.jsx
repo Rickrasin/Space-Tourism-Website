@@ -9,6 +9,10 @@ import BgDesktop from "../../assets/technology/background-technology-desktop.jpg
 import BgTablet from "../../assets/technology/background-technology-tablet.jpg";
 import BgMobile from "../../assets/technology/background-technology-mobile.jpg";
 
+import Launch from "../../assets/technology/image-launch-vehicle-portrait.jpg";
+import SpacePort from "../../assets/technology/image-spaceport-portrait.jpg";
+import SpaceCapsule from "../../assets/technology/image-space-capsule-portrait.jpg";
+
 import { Container, HomeTitle, Content } from "./techonology.styled";
 
 const Technology = ({ technology }) => {
@@ -18,6 +22,19 @@ const Technology = ({ technology }) => {
   const { name, description, images } = activeTechnology;
   const handleNavItemClick = (index) => {
     setActiveIndex(index);
+  };
+
+  const GetImage = () => {
+    switch (activeIndex) {
+      case 0:
+        return Launch;
+      case 1:
+        return SpacePort;
+      case 2:
+        return SpaceCapsule;
+      default:
+        return Launch;
+    }
   };
 
   console.log(name, description, images);
@@ -64,7 +81,7 @@ const Technology = ({ technology }) => {
                 <div className="content-container-right">
                   <img
                     className="Planet"
-                    src={images.portrait}
+                    src={GetImage()}
                   />
                 </div>
               </div>

@@ -5,5 +5,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/Space-Tourism-Website/",
-  assetsInclude: ["**/*.jpg", "**/*.png", "**/*.webp"]
+  assetsDir: "/src/assets/",
+
 });

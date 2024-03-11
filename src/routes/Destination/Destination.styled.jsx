@@ -33,8 +33,6 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
-    gap: 0;
-    justify-content: space-around;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.xxl}) {

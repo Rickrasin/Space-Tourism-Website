@@ -7,6 +7,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import Douglas from "../../assets/crew/image-douglas-hurley.png";
+import Mark from "../../assets/crew/image-mark-shuttleworth.png";
+import Victor from "../../assets/crew/image-victor-glover.png";
+import Anousheh from "../../assets/crew/image-anousheh-ansari.png";
+
 const CrewContent = ({ props }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeCrew = props[activeIndex];
@@ -15,6 +20,23 @@ const CrewContent = ({ props }) => {
 
   const handleNavItemClick = (index) => {
     setActiveIndex(index);
+  };
+
+  const GetImage = () => {
+    switch (activeIndex) {
+      case 0:
+        return Douglas;
+      case 1:
+        return Mark;
+
+      case 2:
+        return Victor;
+      case 3:
+        return Anousheh;
+
+      default:
+        return Douglas;
+    }
   };
 
   return (
@@ -51,7 +73,7 @@ const CrewContent = ({ props }) => {
 
         <ContainerRight className="container-right">
           <img
-            src={images.png}
+            src={GetImage()}
             alt={name}
           />
         </ContainerRight>

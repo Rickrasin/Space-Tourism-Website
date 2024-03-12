@@ -2,13 +2,14 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
-@media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+@media screen and (min-width: ${props => props.theme.breakpoints.sm}) {
     
     * {
         color: #fff;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        overflow-y: hidden;
     }
 
     #root {
@@ -17,6 +18,23 @@ const GlobalStyles = createGlobalStyle`
     
     }
 
+    html, body {
+        overflow: overlay;
+    }
+
+    ::-webkit-scrollbar {
+  width: 3px;
+  height: 3px; /* A altura só é vista quando a rolagem é horizontal */
+}
+
+    ::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #030303;
+}
 
     .app {
     height: 100vh;
@@ -61,16 +79,16 @@ const GlobalStyles = createGlobalStyle`
     }
     
 }
-    @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+    @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.lg}) {
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xl}) {
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xxl}) {
     a {
         font-size: 1rem;
     }

@@ -5,8 +5,8 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [The challenge](#the-challenge)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -24,6 +24,10 @@ This Website helped me reinforce my knowledge of ReactJS and its main libs, libs
 
 In the distant future I intend to change some things that I don't agree with and I believe I could have done better on the site.
 
+### Screenshot
+
+![](./screenshot.png)
+
 ### The challenge
 
 Users should be able to:
@@ -32,9 +36,7 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - View each page and be able to toggle between the tabs to see new information
 
-### Screenshot
 
-![](./screenshot.png)
 ### Links
 
 - Solution URL: [https://github.com/Rickrasin/Space-Tourism-Website](https://github.com/Rickrasin/Space-Tourism-Website)

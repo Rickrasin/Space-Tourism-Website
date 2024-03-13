@@ -4,7 +4,7 @@ export const Container = styled.div`
   @media screen and (min-width: ${props => props.theme.breakpoints.sm}) {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     gap: 2.0325rem;
 
     .nav-container {
@@ -41,6 +41,23 @@ export const Container = styled.div`
       height: 100%;
     }
   }
+
+  @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
+    .nav-container {
+      .point {
+        width: 3.75rem;
+        height: 3.75rem;
+
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: ${props => props.theme.breakpoints.lg}) {
+    .nav-container {
+      flex-direction: column;
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -49,6 +66,7 @@ export const Content = styled.div`
     flex-direction: column;
     height: 100%;
     gap: 2.0325rem;
+
     .Planet {
       display: block; /* Garante que a imagem seja exibida como bloco */
       width: 100vw; /* Largura total da viewport */
@@ -69,7 +87,6 @@ export const Content = styled.div`
       &-left {
         max-width: 100%;
         img {
-          position: absolute;
           right: 0;
           width: 100vw;
         }
@@ -107,6 +124,76 @@ export const Content = styled.div`
       }
     }
   }
+
+  @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
+    .content-container {
+      &-right {
+        h2 {
+          font-size: 1rem;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: ${props => props.theme.breakpoints.lg}) {
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .margin-container {
+      display: grid;
+      height: 100%;
+      align-items: center;
+
+      grid-template-columns: 1fr 1fr;
+      .content-container {
+        &-right {
+          text-align: left;
+          align-items: flex-start;
+
+          h2 {
+            font-size: 1rem;
+          }
+
+          h1 {
+            font-size: 3.5rem;
+          }
+
+          p {
+            font-size: 1.125rem;
+            width: 70%;
+          }
+        }
+
+        &-left {
+          position: absolute;
+          right: 0;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: ${props => props.theme.breakpoints.xl}) {
+    .margin-container {
+      grid-template-columns: 2fr 1fr;
+      .content-container {
+        &-right {
+        }
+      }
+    }
+  }
 `;
 
 export const HomeTitle = styled.div`
@@ -129,6 +216,14 @@ export const HomeTitle = styled.div`
       span {
         opacity: 0.25;
       }
+    }
+  }
+
+  @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
+    margin: auto 0;
+
+    .title {
+      font-size: 1.25rem;
     }
   }
 `;

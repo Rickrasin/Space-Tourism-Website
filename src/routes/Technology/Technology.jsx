@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useRef, useLayoutEffect, useState } from "react";
+import { useState } from "react";
 
 import Header from "../../components/Header/Header";
 import Page from "../../components/Page/Page";
@@ -24,7 +24,7 @@ const Technology = ({ technology }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeTechnology = technology[activeIndex];
 
-  const { name, description, images } = activeTechnology;
+  const { name, description } = activeTechnology;
   const handleNavItemClick = index => {
     setActiveIndex(index);
   };
@@ -32,18 +32,15 @@ const Technology = ({ technology }) => {
   const GetImage = () => {
     switch (activeIndex) {
       case 0:
-        return width < 768 ? LaunchLandScape : Launch;
+        return width < 992 ? LaunchLandScape : Launch;
       case 1:
-        return width < 768 ? SpacePortLandScape : SpacePort;
+        return width < 992 ? SpacePortLandScape : SpacePort;
       case 2:
-        return width < 768 ? SpaceCapsuleLandScape : SpaceCapsule;
+        return width < 992 ? SpaceCapsuleLandScape : SpaceCapsule;
       default:
-        return width < 768 ? LaunchLandScape : Launch;
+        return width < 992 ? LaunchLandScape : Launch;
     }
   };
-
-  console.log(name, description, images);
-  console.log(technology);
 
   return (
     <Page
@@ -53,24 +50,22 @@ const Technology = ({ technology }) => {
     >
       <Container>
         <Header />
-        <HomeTitle className="title">
-          <div className="title">
-            <span>03</span> SPACE LAUNCH 101
-          </div>
-        </HomeTitle>
+        <ContentMargin>
+          <HomeTitle className="title">
+            <div className="title">
+              <span>03</span> SPACE LAUNCH 101
+            </div>
+          </HomeTitle>
+        </ContentMargin>
 
         <Content>
-          {width < 768 && <img className="Planet" src={GetImage()} />}
-          <ContentMargin>
+          {width < 992 && <img className="Planet" src={GetImage()} />}
+          <ContentMargin className="margin-container">
             <div className="container">
-              {width > 768 &&
-                <div className="content-container-left">
-                  <img className="Planet" src={GetImage()} />
-                </div>}
               <nav className="nav-container">
                 {technology.map((technology, index) =>
                   <div
-                    className="point"
+                    className={`point ${activeIndex === index ? "active" : ""}`}
                     key={index}
                     onClick={() => handleNavItemClick(index)}
                   >
@@ -78,7 +73,6 @@ const Technology = ({ technology }) => {
                   </div>
                 )}
               </nav>
-
               <div className="content-container-right">
                 <h2>THE TERMINOLOGY…</h2>
                 <h1>
@@ -89,6 +83,11 @@ const Technology = ({ technology }) => {
                 </p>
               </div>
             </div>
+
+            {width > 992 &&
+              <div className="content-container-left">
+                <img className="Planet" src={GetImage()} />
+              </div>}
           </ContentMargin>
         </Content>
       </Container>

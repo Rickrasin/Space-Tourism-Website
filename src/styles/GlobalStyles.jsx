@@ -17,22 +17,19 @@ const GlobalStyles = createGlobalStyle`
     
     }
 
-    html, body {
-        overflow: overlay;
-    }
-
     ::-webkit-scrollbar {
   width: 3px;
-  height: 3px; /* A altura só é vista quando a rolagem é horizontal */
+  height: 3px; 
 }
 
     ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #030303;
   padding: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #030303;
+  background-color: #f1f1f1;
+  border-radius: 10px;
 }
 
     .app {

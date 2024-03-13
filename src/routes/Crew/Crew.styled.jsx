@@ -218,6 +218,9 @@ export const ContainerRight = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+    img {
+      height: 40rem;
+    }
   }
   @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
   }

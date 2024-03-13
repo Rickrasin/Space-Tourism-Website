@@ -37,7 +37,7 @@ export const HomeContainer = styled.div`
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
-    gap: 1rem;
+    gap: 3rem;
     .content-container {
       &-subtitle {
         font-size: 1.25rem;

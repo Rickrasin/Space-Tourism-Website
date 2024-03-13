@@ -13,6 +13,7 @@ export const ButtonStyle = styled(motion.button)`
     width: 9.375rem;
     border-radius: 50%;
     letter-spacing: 0.125rem;
+    cursor: pointer;
   }
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {

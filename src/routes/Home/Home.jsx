@@ -14,14 +14,10 @@ const Home = () => {
       desktopBackground={BgDesktop}
       tabletBackground={BgTablet}
       mobileBackground={BgMobile}
-
     >
       <Container className="h-container">
         <Header />
-        <ContentMargin
-         
-          className="content-margin"
-        >
+        <ContentMargin className="content-margin">
           <HomeContent />
         </ContentMargin>
       </Container>

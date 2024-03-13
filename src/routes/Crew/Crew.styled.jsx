@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.sm}) {
     display: flex;
     flex-direction: column;
 
@@ -19,6 +19,7 @@ export const Container = styled.div`
         cursor: pointer;
 
         &:hover {
+          cursor: pointer;
           opacity: 50.01%;
         }
       }
@@ -37,7 +38,7 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
     height: 100vh;
 
     .nav-container {
@@ -51,10 +52,10 @@ export const Container = styled.div`
       gap: 0;
     }
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.lg}) {
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xl}) {
     .nav-container {
       .sphere {
         height: 15px;
@@ -62,38 +63,38 @@ export const Container = styled.div`
       }
     }
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xxl}) {
   }
 `;
 
 export const Content = styled.div`
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.sm}) {
     /* margin-top: 9.625rem; */
     display: grid;
     grid-template-rows: 4fr 4fr;
     align-items: start;
     gap: 2rem;
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
     grid-template-rows: 4fr 6fr;
     gap: 0;
     align-items: end;
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.lg}) {
     grid-template-rows: 1fr;
     grid-template-columns: 6fr 5fr;
     gap: 0;
     align-items: end;
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xl}) {
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xxl}) {
   }
 `;
 
 export const ContainerLeft = styled.div`
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.sm}) {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-evenly;
@@ -153,7 +154,7 @@ export const ContainerLeft = styled.div`
     }
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
     align-items: center;
     flex-direction: column;
     gap: 2.5rem;
@@ -168,7 +169,7 @@ export const ContainerLeft = styled.div`
       }
     }
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.lg}) {
     height: 100%;
     align-items: start;
     div {
@@ -187,17 +188,17 @@ export const ContainerLeft = styled.div`
     }
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xl}) {
     align-items: flex-start;
 
     gap: 7.5rem;
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xxl}) {
   }
 `;
 
 export const ContainerRight = styled.div`
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.sm}) {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -206,10 +207,10 @@ export const ContainerRight = styled.div`
       height: 16rem;
     }
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
     border: none;
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.lg}) {
     height: 100%;
     justify-content: flex-end;
     img {
@@ -217,16 +218,13 @@ export const ContainerRight = styled.div`
     }
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
-    img {
-      height: 40rem;
-    }
+  @media screen and (min-width: ${props => props.theme.breakpoints.xl}) {
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xxl}) {
   }
 `;
 export const HomeTitle = styled.div`
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.sm}) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -250,21 +248,21 @@ export const HomeTitle = styled.div`
       }
     }
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
     .title {
       justify-content: flex-start;
       font-size: 1.25rem;
     }
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.lg}) {
     .title {
       justify-content: flex-start;
       font-size: 1.75rem;
     }
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xl}) {
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xxl}) {
   }
 `;

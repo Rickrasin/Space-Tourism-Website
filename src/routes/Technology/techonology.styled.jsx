@@ -4,7 +4,7 @@ export const Container = styled.div`
   @media screen and (min-width: ${props => props.theme.breakpoints.sm}) {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     gap: 2.0325rem;
 
     .nav-container {
@@ -66,11 +66,12 @@ export const Content = styled.div`
     flex-direction: column;
     height: 100%;
     gap: 2.0325rem;
+    margin-bottom: 2rem;
 
     .Planet {
-      display: block; /* Garante que a imagem seja exibida como bloco */
-      width: 100vw; /* Largura total da viewport */
-      height: auto; /* Altura automática para manter a proporção original da imagem */
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     .container {
@@ -153,8 +154,9 @@ export const Content = styled.div`
       display: grid;
       height: 100%;
       align-items: center;
+      margin-right: 0;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
       .content-container {
         &-right {
           text-align: left;
@@ -175,7 +177,6 @@ export const Content = styled.div`
         }
 
         &-left {
-          position: absolute;
           right: 0;
           img {
             width: 100%;
@@ -187,7 +188,6 @@ export const Content = styled.div`
 
   @media screen and (min-width: ${props => props.theme.breakpoints.xl}) {
     .margin-container {
-      grid-template-columns: 2fr 1fr;
       .content-container {
         &-right {
         }

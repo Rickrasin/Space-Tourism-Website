@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.sm}) {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -12,6 +12,7 @@ export const Container = styled.div`
       display: flex;
       height: 100%;
       align-items: center;
+      padding-bottom: 2rem;
     }
     .title {
       display: flex;
@@ -21,26 +22,29 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
     gap: 2.5rem;
     .title {
       align-items: initial;
     }
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.lg}) {
+    .content-margin {
+      padding-bottom: 0;
+    }
     gap: 4.75rem;
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xl}) {
   }
 
-  @media (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+  @media (min-width: ${props => props.theme.breakpoints.xxl}) {
   }
 `;
 
 export const HomeTitle = styled.div`
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.sm}) {
     display: flex;
 
     gap: 1.125rem;
@@ -61,7 +65,7 @@ export const HomeTitle = styled.div`
     }
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.md}) {
     h2 {
       font-size: 1.25rem;
     }
@@ -71,7 +75,7 @@ export const HomeTitle = styled.div`
     }
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.lg}) {
     gap: 1.4%;
 
     h2 {
@@ -83,9 +87,9 @@ export const HomeTitle = styled.div`
     }
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  @media screen and (min-width: ${props => props.theme.breakpoints.xl}) {
   }
 
-  @media (min-width: ${(props) => props.theme.breakpoints.xxl}) {
+  @media (min-width: ${props => props.theme.breakpoints.xxl}) {
   }
 `;

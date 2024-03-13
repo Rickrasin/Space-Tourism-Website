@@ -21,6 +21,7 @@ export const Container = styled.div`
         width: 2.5rem;
         border: 1px solid rgba(255, 255, 255, 0.25);
         border-radius: 50%;
+        cursor: pointer;
 
         font-family: "Bellefair";
         font-size: 1rem;
